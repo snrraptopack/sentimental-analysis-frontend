@@ -23,8 +23,8 @@ export class AiResponse {
 
     async addJournal() {
         this.isLoading = true;
-
-        const[data,error] = await promiseFor<Response,ResponseSchema>(fetch('http://localhost:3000', {
+            //please if you are testing locally the url is http://localhost:3001/api
+        const[data,error] = await promiseFor<Response,ResponseSchema>(fetch('https://sentimental-analysis-backend.onrender.com/api', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
